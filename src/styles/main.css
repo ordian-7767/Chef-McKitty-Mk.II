@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(226, 195, 255);
+  font-family: 'Kalam', cursive;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  text-align: center;
+  padding-top: 20px;
+  margin: 20px;
+}
+
+a {
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+}
+
+button, input, textarea {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -45px;
+  left: 43%;
+  padding: 8px;
+  background-color: rgb(174, 36, 216);;
+  color: white;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+
+/* Navigation Bar */
+
+nav {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.35);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+} 
+
+navigation-bar {
+  display: flex;
+  background-color: rgb(192, 124, 255);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 20px;
+}
+
+navigation-bar img {
+  width: 200px;
+  height: auto;
+}
+
+navigation-bar ul {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+}
+
+navigation-bar  li {
+  cursor: pointer;
+}
+
+navigation-bar  a {
+  margin: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+
+navigation-bar li:hover {
+  background-color: rgb(255, 195, 248);
+  border-radius: 30px;
+}
+
+#hamburgerButton {
+  color: white;
+  font-size: 30px;
+  border: none;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+#hamburgerButton:hover {
+  background-color: white;
+  color:  rgb(192, 124, 255);
+}
+
+.jumbotron {
+  width: 100%;
+  padding: 50px 35px 50px 35px;
+  transition: min-height 0.3s;
+  background-image: url('../public/images/heros/hero-image_2.jpg');
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+}
+
+.jumbotron-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.jumbotron-inner > img {
+  width: 200px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jumbotron-title {
+  width: 100%;
+  margin: 0.5em 0.25em;
+  display: inline-block;
+  color: white;
+}
+
+.main-title {
+  padding: 0 20px 20px 20px;
+  width: 100%;
+  font-size: 20px;
+  border-bottom: 5px solid rgb(192, 124, 255);
+}
+
+/* Bagian List Restaurant */
+
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.restaurant-item {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.35);
+  background-color: rgb(253, 208, 255);
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.restaurant-item__header {
+  position: relative;
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+  width: 100%;
+  min-height: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__location {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.75);;
+  color: white;
+}
+ 
+.restaurant-item .restaurant-item__header .restaurant-item__header__location .restaurant-item__header__location__city {
+  margin-left: 10px;
+  position: relative;
+}
+
+.restaurant-item .restaurant-item__content {
+  padding: 16px;
+  text-align: center;
+}
+ 
+.restaurant-item .restaurant-item__content h3 {
+  margin: 0 0 10px 0;
+}
+ 
+.restaurant-item .restaurant-item__content h3 {
+  color: #db0000;
+  text-decoration: none;
+}
+ 
+.restaurant-item .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin-bottom: 20px;
+}
+
+.restaurant-item .restaurant-item__content a {
+  color: white;
+  padding-top: 10px;
+  background-color: rgb(192, 124, 255);
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.restaurant-item .restaurant-item__content a:focus {
+  color:rgb(192, 124, 255);
+  background-color: white;
+}
+
+  /* Bagian Detail Restoran */
+   
+  .restaurant {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px 16px;
+  }
+   
+  .restaurant .restaurant__poster {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+   
+  .restaurant .restaurant__info h4 {
+    margin: 8px 0;
+  }
+
+  .restaurant .restaurant__review {
+    margin-bottom: 50px;
+  }
+
+  .restaurant .restaurant__review h3 {
+    margin: 8px 0;
+  }
+
+  .restaurant .restaurant__review .reviewer-list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .restaurant .restaurant__review .reviewer-list .reviewer-info {
+    text-align: left;
+    background-color: rgb(253, 208, 255);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.35);
+    border-radius: 30px;
+    padding: 20px;
+  }
+
+  .restaurant .restaurant__review .reviewer-list .reviewer-info p {
+    word-break: break-all;
+  }
+
+  /* Bagian Review Form */
+
+  .add-review {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 30px;
+    background-color: rgb(253, 208, 255);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.35);
+    border-radius: 30px;
+  }
+
+  .add-review h3 {
+    padding-bottom: 15px;
+  }
+
+  .add-review .add-review__data input {
+    max-width: 400px;
+  }
+
+  .add-review .add-review__data textarea {
+    max-width: 400px;
+    min-height: 100px;
+  }
+
+  .add-review .add-review__data input, textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 10px;
+    margin: 5px 0;
+    font-family: 'Kalam', cursive;
+  }
+
+  .add-review .add-review__data button {
+    width: 100%;
+    max-width: 200px;
+    min-height: 50px;
+    border-radius: 20px;
+    border: 2px solid  #27a11c;
+    font-size: 22px;
+    font-family: 'Kalam', cursive;
+    color: white;
+    background-color: #3fff2e;
+  }
+
+  .add-review .add-review__data button:focus {
+    border: 2px solid  #000000;
+    color:  rgb(192, 124, 255);
+    background-color: #ffffff;
+  }
+
+  /* Bagian Favorite */
+
+.favorite {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:rgb(128, 18, 161);
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Bagian Error, Loading & Empty */
+
+.error-message, .page-loading, .empty-favorited {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  padding: 10px;
+}
+
+.error-message, .page-loading, .empty-favorited h2 {
+  width: 100%;
+  font-size: medium;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.error-message .error-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.page-loading .loading-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.empty-favorited .empty-favorited__image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/*  Bagian Footer */
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(192, 124, 255);
+}
+
+footer > p {
+  font-weight: bold;
+  font-size: 100%;
+  color: beige;
+}
