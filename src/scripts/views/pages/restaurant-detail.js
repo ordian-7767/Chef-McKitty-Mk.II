@@ -1,7 +1,8 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantSource from '../../data/restaurant-source';
 import { restaurantDetailTemplate, createReviewTemplate } from '../templates/template-creator';
-import FavoriteButtonInitiator from '../../utils/favorite-initiator';
+import FavoriteButtonPresenter from '../../utils/favorite-button-presenter';
+import FavoritedRestaurantIdb from '../../data/favorited-restaurant-idb';
 
 const RestaurantDetail = {
   async render() {
@@ -21,8 +22,9 @@ const RestaurantDetail = {
     restaurantContainer.innerHTML = restaurantDetailTemplate(restaurant);
     reviewContainer.innerHTML = createReviewTemplate(restaurant);
 
-    FavoriteButtonInitiator.init({
+    FavoriteButtonPresenter.init({
       favoriteButtonContainer: document.querySelector('#favoriteButtonContainer'),
+      favoritedRestaurant: FavoritedRestaurantIdb,
       restaurant: {
         id: url.id,
         name: restaurant.name,
@@ -41,7 +43,7 @@ const RestaurantDetail = {
 
     buttonSendReview.addEventListener('click', async () => {
       if (reviewerName.value === '' || reviewerComment.value === '') {
-        alert('Please Fill Add Review From Before Sending!');
+        alert('Please Fill Your Name ANd Comment Form Before Sending!');
       } else {
         const review = {
           id: restaurantId,

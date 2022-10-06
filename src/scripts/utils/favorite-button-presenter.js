@@ -1,10 +1,13 @@
-import FavoritedRestaurantIdb from '../data/favorited-restaurant-idb';
-import { createFavoriteButtonTemplate, createFavoritedButtonTemplate } from '../views/templates/template-creator';
+import {
+  createFavoriteRestaurantButtonTemplate,
+  createUnfavoritedRestaurantButtonTemplate,
+} from '../views/templates/template-creator';
 
-const FavoriteButtonInitiator = {
-  async init({ favoriteButtonContainer, restaurant }) {
+const FavoriteButtonPresenter = {
+  async init({ favoriteButtonContainer, favoritedRestaurant, restaurant }) {
     this._favoriteButtonContainer = favoriteButtonContainer;
     this._restaurant = restaurant;
+    this._favoritedRestaurant = favoritedRestaurant;
 
     await this._renderButton();
   },
@@ -20,30 +23,30 @@ const FavoriteButtonInitiator = {
   },
 
   async _isRestaurantExist(id) {
-    const restaurant = await FavoritedRestaurantIdb.getRestaurant(id);
+    const restaurant = await this._favoritedRestaurant.getRestaurant(id);
     return !!restaurant;
   },
 
   _renderFavorite() {
-    this._favoriteButtonContainer.innerHTML = createFavoriteButtonTemplate();
+    this._favoriteButtonContainer.innerHTML = createFavoriteRestaurantButtonTemplate();
 
     const favoriteButton = document.querySelector('#favoriteButton');
     favoriteButton.addEventListener('click', async () => {
-      await FavoritedRestaurantIdb.putRestaurant(this._restaurant);
+      await this._favoritedRestaurant.putRestaurant(this._restaurant);
       this._renderButton();
     });
   },
 
   _renderFavorited() {
-    this._favoriteButtonContainer.innerHTML = createFavoritedButtonTemplate();
+    this._favoriteButtonContainer.innerHTML = createUnfavoritedRestaurantButtonTemplate();
 
     const favoriteButton = document.querySelector('#favoriteButton');
     favoriteButton.addEventListener('click', async () => {
-      await FavoritedRestaurantIdb.removeRestaurant(this._restaurant.id);
+      await this._favoritedRestaurant.removeRestaurant(this._restaurant.id);
       this._renderButton();
     });
   },
 
 };
 
-export default FavoriteButtonInitiator;
+export default FavoriteButtonPresenter;
