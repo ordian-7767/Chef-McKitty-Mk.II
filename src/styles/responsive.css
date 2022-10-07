@@ -8,9 +8,9 @@
       font-size: 20px;
     }
     navigation-bar img {
-      width: 150px;
+      width: 120px;
     }
-    .jumbotron-inner > img {
+    .jumbotron-inner img {
       width: 150px;
     }
     #hamburgerButton {
@@ -33,24 +33,24 @@
       padding: 20px 20px 20px 20px;
     }
   
-  #navigationDrawer.open {
-      transform: translate(-20px, 180px)
+    #navigationDrawer.open {
+        transform: translate(-20px, 180px)
     }
-  
-  navigation-bar ul {
-    flex-direction: column;
-    justify-content: space-around;
+    
+    navigation-bar ul {
+      flex-direction: column;
+      justify-content: space-around;
     }
-  
-  #navigationDrawer li {
-      border-bottom: 2px solid blueviolet;
-      text-align: center;
+    
+    #navigationDrawer li {
+        border-bottom: 2px solid blueviolet;
+        text-align: center;
     }
-      
-  #navigationDrawer a {
-      text-decoration: none;
-      font-size: 20px;
-      color: white;
+        
+    #navigationDrawer a {
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
     }
   
   }
