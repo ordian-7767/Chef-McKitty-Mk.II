@@ -34,7 +34,7 @@ const restaurantDetailTemplate = (restaurant) => `
 const restaurantListTemplate = (restaurant) => `
   <div class="restaurant-item">
     <div class="restaurant-item__header">
-      <img class="restaurant-item__header__poster" loading=”lazy” alt="${restaurant.name}"
+      <img class="restaurant-item__header__poster lazyload" alt="${restaurant.name}'s image"
            src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">
       <div class="restaurant-item__header__location">
         <p><span class="restaurant-item__header__location__city">${restaurant.city} </span></p>
@@ -44,7 +44,7 @@ const restaurantListTemplate = (restaurant) => `
       <h3>${restaurant.name}</h3>
       <p>${restaurant.description}</p>
       <p>Rating : ⭐️ ${restaurant.rating}</p>
-      <a href="/#/restaurant-detail/${restaurant.id}" aria-label="find out more about ${restaurant.name}">Find Out More!</a>
+      <h4 class="detail-button"><a href="/#/restaurant-detail/${restaurant.id}" aria-label="find more about ${restaurant.name}">Find Out More!</a></h4>
     </div>
 
   </div>
@@ -64,7 +64,7 @@ const createUnfavoritedRestaurantButtonTemplate = () => `
 
 const createEmptyFavoritedTemplate = () => `
   <div class="empty-favorited">
-    <h2>
+    <h2 class="restaurant-item__not__found">
       Hmm... It Looks Like Currently You Don't Have Any Favorited Restaurant Yet,<br>
       Why Don't We Find One Now!<br>
       Click Home Button To Go To The Home Page.
