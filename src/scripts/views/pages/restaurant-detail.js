@@ -43,7 +43,7 @@ const RestaurantDetail = {
 
     buttonSendReview.addEventListener('click', async () => {
       if (reviewerName.value === '' || reviewerComment.value === '') {
-        alert('Please Fill Your Name ANd Comment Form Before Sending!');
+        alert('Please Make Sure Both Name & Comment Form Are Filled Before Sending!');
       } else {
         const review = {
           id: restaurantId,

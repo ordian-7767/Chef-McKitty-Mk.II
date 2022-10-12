@@ -8,10 +8,10 @@ class JumboTron extends HTMLElement {
     <div class="jumbotron">
       <picture>
         <source media="(max-width: 600px)" srcset="./images/heros/hero-image_2-small.jpg">
-        <img class="hero-image" src="./images/heros/hero-image_2-large.jpg" alt="Hero Image">
+        <img width="800" height="450" class="hero-image skeleton-image skeleton-effect-fade" src="./images/heros/hero-image_2-large.jpg" alt="Hero Image">
       </picture>
       <div class="jumbotron-inner">
-        <img src="./images/jumbo-image.png" alt="Chef McKitty the Cat">
+        <img width="300" height="300" src="./images/jumbo-image.png" alt="Chef McKitty the Cat">
         <h1 class="jumbotron-title">Chef McKitty Here Will Help You Find Restaurants!</h1>
       </div>
     </div>

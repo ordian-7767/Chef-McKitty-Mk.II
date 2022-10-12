@@ -6,7 +6,7 @@ class NavigationBar extends HTMLElement {
   render() {
     this.innerHTML = `
         <div class="logo">
-          <img src="./images/logo-img.png" alt="Chef McKitty's Logo">
+          <img width="200" height="75" src="./images/logo-img.png" alt="Chef McKitty's Logo">
         </div>
     
         <div class="hamburger-button">
