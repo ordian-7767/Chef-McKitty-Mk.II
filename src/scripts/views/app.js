@@ -6,6 +6,7 @@ import './components/page-loader';
 import './components/footer';
 import './components/jumbo-tron';
 import './components/navigation-bar';
+import { removeAllSkeletonElement } from '../utils/skeleton-element';
 
 class App {
   constructor({ button, drawer, content }) {
@@ -41,6 +42,7 @@ class App {
     } finally {
       setInterval(() => {
         document.querySelector('page-loader').style.display = 'none';
+        removeAllSkeletonElement();
       }, 3000);
     }
   }

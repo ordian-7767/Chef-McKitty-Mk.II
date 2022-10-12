@@ -8,31 +8,52 @@
   <link rel="icon" href="./images/favicon.png">
   <link rel="manifest" href="./app.webmanifest">
   <meta name="theme-color" content="#AE24D8"/>
+
+  <!-- Web Title -->
+  <title>Restaurant Apps Starter Project</title>
+
+  <!-- Icon for Apple -->
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon-180x180.png">
+
+  <!-- Import data restaurant API -->
+  <link 
+    rel="preload" 
+    href="https://restaurant-api.dicoding.dev/list"
+    crossorigin="anonymous"
+    as="fetch"
+  />
+
+  <!-- Font Awesome Icon -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <title>Restaurant Apps Starter Project</title>
 </head>
 
 <body>
 
+  <!-- Loading Page -->
+  <page-loader></page-loader>
+
+  <!-- Skip Link -->
   <a href="#mainContent" class="skip-link">Skip To Content?</a>
 
+  <!-- Navigation Bar -->
   <nav>
     <navigation-bar></navigation-bar>
   </nav>
 
+  <!-- Jumbotron -->
   <header>
     <jumbo-tron></jumbo-tron>
   </header>
 
-  <page-loader></page-loader>
-
-  <main id="mainContent" tabindex="0">
-  </main>
-
+  <!-- Main Content -->
+  <main id="mainContent" tabindex="0"></main>
+  
+  <!-- Footer -->
   <footer>
     <foo-ter></foo-ter>
   </footer>
 
 </body>
+
 </html>

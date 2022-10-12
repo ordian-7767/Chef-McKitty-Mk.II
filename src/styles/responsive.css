@@ -8,10 +8,11 @@
       font-size: 20px;
     }
     navigation-bar img {
-      width: 120px;
+      width: 125px;
     }
-    .jumbotron-inner img {
+    .jumbotron-inner img, .error-image, .loading-image {
       width: 150px;
+      height: auto;
     }
     #hamburgerButton {
       font-size: 30px;
@@ -20,21 +21,30 @@
       font-size: 25px;
     }
   }
+
+  @media screen and (min-width: 400px) {
+    .jumbotron-inner img, .error-image, .loading-image {
+      width: 150px;
+      height: auto;
+    }
+  }
   
   @media screen and (max-width: 650px) {
     #navigationDrawer {
       width: 50%;
       height: 300px;
       position: absolute;
+      border-bottom-right-radius: 8px;
+
       
-      transform: translate(-500px, 180px);
+      transform: translate(-500px, 175px);
       transition: transform 0.3s ease-in-out;
       background-color: rgba(192, 124, 255);
       padding: 20px 20px 20px 20px;
     }
   
     #navigationDrawer.open {
-        transform: translate(-20px, 180px)
+        transform: translate(-20px, 175px)
     }
     
     navigation-bar ul {
@@ -66,7 +76,7 @@
       font-size: 40px;
     }
     navigation-bar ul {
-      width: 50%;
+      width: 60%;
     }
     navigation-bar .hamburger-button {
       display: none;
@@ -116,16 +126,16 @@
   
   @media screen and (min-width: 800px) {
     navigation-bar ul {
-      width: 40%;
+      width: 45%;
     }
     .error-message, .page-loading, .empty-favorited h2 {
-      font-size: xx-large;
+      font-size: x-large;
     }
   }
   
   @media screen and (min-width: 1000px) {
     navigation-bar ul {
-      width: 35%;
+      width: 40%;
     }
     .restaurant-list {
       grid-template-columns: repeat(3, 1fr);
@@ -144,6 +154,11 @@
       width: 400px;
       height: 100%;
     }
+
+    .error-image, .loading-image {
+      width: 400px;
+      height: auto;
+    }
   
     .jumbotron-title {
       margin-top: auto;
@@ -153,6 +168,9 @@
   }
 
   @media screen and (min-width: 1200px) {
+    navigation-bar ul {
+      width: 30%;
+    }
     .restaurant-list {
       grid-template-columns: repeat(4, 1fr);
     }
