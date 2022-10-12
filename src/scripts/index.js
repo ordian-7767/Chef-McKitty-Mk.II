@@ -5,7 +5,6 @@ import App from './views/app';
 import swRegister from './utils/sw-register';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
-// eslint-disable-next-line import/no-unresolved
 import 'skeleton-elements/css';
 
 const app = new App({
