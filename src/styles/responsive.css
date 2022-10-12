@@ -37,14 +37,14 @@
       border-bottom-right-radius: 8px;
 
       
-      transform: translate(-500px, 175px);
+      transform: translate(-500px, 172px);
       transition: transform 0.3s ease-in-out;
       background-color: rgba(192, 124, 255);
       padding: 20px 20px 20px 20px;
     }
   
     #navigationDrawer.open {
-        transform: translate(-20px, 175px)
+        transform: translate(-20px, 172px)
     }
     
     navigation-bar ul {
