@@ -6,9 +6,9 @@ class JumboTron extends HTMLElement {
   render() {
     this.innerHTML = `
     <div class="jumbotron">
-      <picture>
+      <picture width="800" height="450">
         <source media="(max-width: 600px)" srcset="./images/heros/hero-image_2-small.jpg">
-        <img width="800" height="450" class="hero-image skeleton-image skeleton-effect-fade" src="./images/heros/hero-image_2-large.jpg" alt="Hero Image">
+        <img class="hero-image skeleton-image skeleton-effect-fade" src="./images/heros/hero-image_2-large.jpg" alt="Hero Image">
       </picture>
       <div class="jumbotron-inner">
         <img width="300" height="300" src="./images/jumbo-image.png" alt="Chef McKitty the Cat">

@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminPngquant = require('imagemin-pngquant');
@@ -77,11 +76,6 @@ module.exports = {
           progressive: true,
         }),
       ],
-    }),
-
-    new WorkboxWebpackPlugin.GenerateSW({
-      swDest: './sw.bundle.js',
-
     }),
 
     new ImageminWebpWebpackPlugin({

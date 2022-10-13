@@ -94,7 +94,7 @@ const createReviewTemplate = (restaurant) => `
       <label for="inputReviewerComment">What's On Your Mind?</label><br>
       <textarea id="inputReviewerComment" type="text" class="form-control" placeholder="Your Beautiful Comment Goes Here..." required></textarea>
     </div>
-    <div class="form-group">
+    <div class="form-group review-buttons">
       <button aria-label="send your comment" id="sendReview" class="btn btn-success">Send It!</button>
     </div>
   <div>
