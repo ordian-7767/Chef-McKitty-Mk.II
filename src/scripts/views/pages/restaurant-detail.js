@@ -3,6 +3,7 @@ import RestaurantSource from '../../data/restaurant-source';
 import { restaurantDetailTemplate, createReviewTemplate } from '../templates/template-creator';
 import FavoriteButtonPresenter from '../../utils/favorite-button-presenter';
 import FavoritedRestaurantIdb from '../../data/favorited-restaurant-idb';
+import { AddingReview } from '../../utils/adding-review';
 
 const RestaurantDetail = {
   async render() {
@@ -35,28 +36,7 @@ const RestaurantDetail = {
       },
     });
 
-    // Add New Reviewer
-    const buttonSendReview = document.querySelector('#sendReview');
-    const reviewerName = document.querySelector('#inputReviewerName');
-    const reviewerComment = document.querySelector('#inputReviewerComment');
-    const restaurantId = restaurant.id;
-
-    buttonSendReview.addEventListener('click', async () => {
-      if (reviewerName.value === '' || reviewerComment.value === '') {
-        alert('Please Make Sure Both Name & Comment Form Are Filled Before Sending!');
-      } else {
-        const review = {
-          id: restaurantId,
-          name: reviewerName.value,
-          review: reviewerComment.value,
-        };
-        const sendReview = await RestaurantSource.addReview(review);
-        console.log(sendReview);
-        alert('Comment Has Been Added! Please Hard-Refresh To See The Changes');
-        reviewerName.value = '';
-        reviewerComment.value = '';
-      }
-    });
+    AddingReview();
   },
 };
 

@@ -1,6 +1,6 @@
 Feature('Adding New Review');
 
-const reviewName = 'morse code';
+const reviewName = 'Jhon Doe';
 const reviewComment = '.... . .-.. .-.. --- / .-- --- .-. -..';
 
 Before(({ I }) => {
@@ -30,7 +30,7 @@ Scenario('adding complete review to a restaurant', ({ I }) => {
   I.click('#sendReview');
 
   I.wait(2);
-  I.seeInPopup('Comment Has Been Added! Please Hard-Refresh To See The Changes');
+  I.seeInPopup('Comment Has Been Added! Wait For A Moment To See The Changes');
   I.acceptPopup();
 });
 

@@ -65,10 +65,10 @@ class PageLoader extends HTMLElement {
 
     <div class="page-loading">
         <h2>Loading The Page, Please Wait...</h2>
-        <picture>
+        <picture width="500" height="389">
             <source type="image/webp" srcset="./images/loading-img.webp">
             <source type="image/png" srcset="./images/loading-img.png">
-            <img width="500" height="389" src="./images/loading-img.png" class="loading-image" alt="Loading Illustration Image">
+            <img class="loading-image" src="./images/loading-img.png" alt="Loading Illustration Image">
         </picture>
         <div class="sk-chase">
             <div class="sk-chase-dot"></div>

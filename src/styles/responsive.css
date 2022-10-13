@@ -10,10 +10,15 @@
     navigation-bar img {
       width: 125px;
     }
-    .jumbotron-inner img, .error-image, .loading-image {
+    .jumbotron-inner img {
       width: 150px;
       height: auto;
     }
+    .error-image, .loading-image, .empty-favorited__image {
+      width: 225px;
+      height: auto;
+    }
+
     #hamburgerButton {
       font-size: 30px;
     }
@@ -23,7 +28,7 @@
   }
 
   @media screen and (min-width: 400px) {
-    .jumbotron-inner img, .error-image, .loading-image {
+    .jumbotron-inner img, .error-image, .loading-image, .empty-favorited__image  {
       width: 150px;
       height: auto;
     }
@@ -155,7 +160,7 @@
       height: 100%;
     }
 
-    .error-image, .loading-image {
+    .error-image, .loading-image, .empty-favorited__image {
       width: 400px;
       height: auto;
     }
