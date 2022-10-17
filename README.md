@@ -1,3 +1,3 @@
 # Chef-McKitty-Mk.II
 
-well, that's about it i guess...
+Now comes with Integrated & End-to-End Testing and also Image & Bundle Optimized!
