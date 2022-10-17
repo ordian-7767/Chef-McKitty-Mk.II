@@ -1,3 +1,4 @@
+import 'regenerator-runtime';
 import { setCacheNameDetails } from 'workbox-core';
 import { cleanupOutdatedCaches, precacheAndRoute } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
@@ -17,9 +18,9 @@ setCacheNameDetails({
 precacheAndRoute(self.__WB_MANIFEST);
 
 registerRoute(
-  ({ url }) => url.pathname === '/restaurant-detail/:id',
+  ({ request }) => request.mode === 'navigate',
   new NetworkFirst({
-    cacheName: 'chef-mckitty-detailpages-cache',
+    cacheName: 'chef-mckitty-pages-cache',
   }),
 );
 
@@ -27,13 +28,6 @@ registerRoute(
   ({ request }) => request.destination === 'image',
   new CacheFirst({
     cacheName: 'chef-mckitty-images-cache',
-  }),
-);
-
-registerRoute(
-  ({ url }) => url.origin === 'https://fonts.googleapis.com' || url.origin === 'https://fonts.gstatic.com',
-  new StaleWhileRevalidate({
-    cacheName: 'google-fonts-stylesheets',
   }),
 );
 
