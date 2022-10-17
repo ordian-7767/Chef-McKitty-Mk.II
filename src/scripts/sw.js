@@ -39,8 +39,7 @@ registerRoute(({ request }) => request.destination === 'style'
 
 cleanupOutdatedCaches();
 
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
+self.addEventListener('install', () => {
+  console.log('Service Worker: Installed');
+  self.skipWaiting();
 });
