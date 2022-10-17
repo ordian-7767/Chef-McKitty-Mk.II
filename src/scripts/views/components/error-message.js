@@ -6,7 +6,7 @@ class ErrorMessage extends HTMLElement {
   render() {
     this.innerHTML = `
         <div class="error-message">
-            <h2>Im Sorry, It's Looks Like There Is No Internet Connection At The Moment...<br>Maybe Try Again Later!</h2>
+            <h2 tabindex="0">Im Sorry, It's Looks Like There Is No Internet Connection At The Moment...<br>Maybe Try Again Later!</h2>
             <picture width="500" height="389" >
               <source type="image/webp" srcset="./images/error-img.webp">
               <source type="image/png" srcset="./images/error-img.png">

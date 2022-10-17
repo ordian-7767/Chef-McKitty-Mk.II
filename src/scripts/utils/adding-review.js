@@ -23,7 +23,7 @@ const AddingReview = async () => {
       alert('Comment Has Been Added! Wait For A Moment To See The Changes');
       reviewerName.value = '';
       reviewerComment.value = '';
-      window.location = `${window.location.href}?eraseCache=true`;
+      window.location.reload(true);
     }
   });
 };

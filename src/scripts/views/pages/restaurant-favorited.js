@@ -4,7 +4,7 @@ import { createEmptyFavoritedTemplate, restaurantListTemplate } from '../templat
 const Favorite = {
   async render() {
     return `
-        <h2 class="main-title">Here's Your Favorited Restaurants :</h2>
+        <h2 class="main-title" tabindex="0" >Here's Your Favorited Restaurants :</h2>
         <div id="restaurant-list" class="restaurant-list"></div>
     `;
   },

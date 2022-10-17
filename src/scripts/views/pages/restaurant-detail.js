@@ -8,7 +8,7 @@ import { AddingReview } from '../../utils/adding-review';
 const RestaurantDetail = {
   async render() {
     return `
-      <h2 class="main-title">Here's Details Of the Restaurant :</h2>
+      <h2 class="main-title" tabindex="0" >Here's Details Of the Restaurant :</h2>
       <div id="restaurant" class="restaurant"></div>
       <div id="addReview" class="add-review"></div>
       <div id="favoriteButtonContainer"></div>
