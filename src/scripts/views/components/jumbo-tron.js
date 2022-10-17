@@ -12,7 +12,7 @@ class JumboTron extends HTMLElement {
       </picture>
       <div class="jumbotron-inner">
         <img width="300" height="300" src="./images/jumbo-image.png" alt="Chef McKitty the Cat">
-        <h1 class="jumbotron-title">Chef McKitty Here Will Help You Find Restaurants!</h1>
+        <h1 tabindex="0" class="jumbotron-title">Chef McKitty Here Will Help You Find Restaurants!</h1>
       </div>
     </div>
     `;

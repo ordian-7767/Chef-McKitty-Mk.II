@@ -64,7 +64,7 @@ class PageLoader extends HTMLElement {
     </style>
 
     <div class="page-loading">
-        <h2>Loading The Page, Please Wait...</h2>
+        <h2 tabindex="0">Loading The Page, Please Wait...</h2>
         <picture width="500" height="389">
             <source type="image/webp" srcset="./images/loading-img.webp">
             <source type="image/png" srcset="./images/loading-img.png">

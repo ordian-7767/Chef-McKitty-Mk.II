@@ -43,7 +43,7 @@ class App {
       setInterval(() => {
         document.querySelector('page-loader').style.display = 'none';
         removeAllSkeletonElement();
-      }, 3000);
+      }, 1000);
     }
   }
 }

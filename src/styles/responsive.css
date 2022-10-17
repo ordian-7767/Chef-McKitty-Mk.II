@@ -28,8 +28,12 @@
   }
 
   @media screen and (min-width: 400px) {
-    .jumbotron-inner img, .error-image, .loading-image, .empty-favorited__image  {
+    .jumbotron-inner img {
       width: 150px;
+      height: auto;
+    }
+    .error-image, .loading-image, .empty-favorited__image  {
+      width: 325px;
       height: auto;
     }
   }
