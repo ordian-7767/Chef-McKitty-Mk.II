@@ -3,8 +3,8 @@ import CONFIG from '../../globals/config';
 const restaurantDetailTemplate = (restaurant) => `
   <h2 class="restaurant__name" tabindex="0">${restaurant.name}</h2>
   <picture>
-        <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}">
-        <img class="restaurant__poster skeleton-image skeleton-effect-fade" src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="${restaurant.name}'s image">
+        <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}">
+        <img class="restaurant__poster lazyload skeleton-image skeleton-effect-fade" data-src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="${restaurant.name}'s image">
   </picture>
   <div class="restaurant__info">
     <h4>Address</h4>
@@ -38,10 +38,10 @@ const restaurantListTemplate = (restaurant) => `
   <div class="restaurant-item">
     <div class="restaurant-item__header">
       <picture>
-        <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SMOLL + restaurant.pictureId}">
+        <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL_SMOLL + restaurant.pictureId}">
         <img 
           class="restaurant-item__header__poster lazyload skeleton-image skeleton-effect-fade" 
-          width="400" height="200"  src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}" alt="${restaurant.name}'s image"
+          width="400" height="200"  data-src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}" alt="${restaurant.name}'s image"
         >
       </picture>
       <div class="restaurant-item__header__location">
