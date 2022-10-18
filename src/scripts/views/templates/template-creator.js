@@ -37,11 +37,11 @@ const restaurantDetailTemplate = (restaurant) => `
 const restaurantListTemplate = (restaurant) => `
   <div class="restaurant-item">
     <div class="restaurant-item__header">
-      <picture>
+      <picture width="400" height="200">
         <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL_SMOLL + restaurant.pictureId}">
         <img 
           class="restaurant-item__header__poster lazyload skeleton-image skeleton-effect-fade" 
-          width="400" height="200"  data-src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}" alt="${restaurant.name}'s image"
+          data-src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}" alt="${restaurant.name}'s image"
         >
       </picture>
       <div class="restaurant-item__header__location">
